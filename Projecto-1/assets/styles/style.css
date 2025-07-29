@@ -1,0 +1,302 @@
+/* Selector + propiedad + valor
+
+selector {
+propiedad: valor
+}
+
+el punto (.) llama a las clases
+el # es para los id unicos
+:: (Pseudo-elementos)
+Se usan para crear o estilizar partes de un elemento que no existen en el HTML.
+
+
+
+Siempre es mejor usar las clases para el estetico y los id para la logica.
+
+Las clases son reutilizables, los ID son unicos
+
+
+REM toma el valor predefinido del navegador
+EM toma el valor de su padre (valor de herencia)
+
+Atajos si quiero hacer por ejemplo 3 divs que tenga la clase caja es:
+div.caja*3
+
+Flexbox:
+La propiedad display: flex define un contenedor como un flex container y habilita el uso de todas las propiedades Flexbox en sus elementos hijos.
+La propiedad flex-direction especifica la dirección en la que los elementos flexibles (flex items) se colocan dentro del contenedor.
+    row (valor por defecto): Los elementos se colocan en una fila horizontal.
+    row-reverse: Los elementos se colocan en una fila horizontal en orden inverso.
+    column: Los elementos se colocan en una columna vertical.
+    column-reverse: Los elementos se colocan en una columna vertical en orden inverso.
+La propiedad flex-wrap especifica si los elementos flexibles deben ajustarse en una sola línea o pueden envolverse en múltiples líneas.
+    nowrap (valor por defecto): Todos los elementos se colocan en una sola línea.
+    wrap: Los elementos se envuelven en múltiples líneas según sea necesario.
+    wrap-reverse: Los elementos se envuelven en múltiples líneas en orden inverso.
+
+La propiedad flex-flow es una forma abreviada de establecer tanto flex-direction como flex-wrap.
+La propiedad justify-content alinea los elementos flexibles a lo largo del eje principal del contenedor (horizontalmente en una fila, verticalmente en una columna).
+    flex-start (valor por defecto): Los elementos se alinean al inicio del contenedor.
+    flex-end: Los elementos se alinean al final del contenedor.
+    center: Los elementos se centran en el contenedor.
+    space-between: Los elementos se distribuyen uniformemente con el primer elemento al inicio y el último al final.
+    space-around: Los elementos se distribuyen uniformemente con espacio igual alrededor de cada uno.
+    space-evenly: Los elementos se distribuyen con espacio igual entre ellos.
+La propiedad align-items alinea los elementos flexibles a lo largo del eje transversal (perpendicular al eje principal) del contenedor.
+    stretch (valor por defecto): Los elementos se estiran para llenar el contenedor.
+    flex-start: Los elementos se alinean al inicio del contenedor.
+    flex-end: Los elementos se alinean al final del contenedor.
+    center: Los elementos se centran en el contenedor.
+    baseline: Los elementos se alinean a lo largo de su línea base.
+La propiedad align-content alinea las líneas del contenedor flexible cuando hay espacio extra en el eje transversal.    
+    stretch (valor por defecto): Las líneas se estiran para ocupar el espacio disponible.
+    flex-start: Las líneas se alinean al inicio del contenedor.
+    flex-end: Las líneas se alinean al final del contenedor.
+    center: Las líneas se centran en el contenedor.
+    space-between: Las líneas se distribuyen uniformemente con el primer línea al inicio y la última al final.
+    space-around: Las líneas se distribuyen uniformemente con espacio igual alrededor de cada una.
+    space-evenly: Las líneas se distribuyen con espacio igual entre ellas.
+La propiedad order determina el orden en que se muestran los ítems flexibles dentro del contenedor flex. Por defecto, todos los ítems tienen un valor order de 0.
+Se utiliza para cambiar el orden de los ítems sin alterar el orden en el HTML.
+La propiedad flex-shrink determina la capacidad de un ítem flexible para reducir su tamaño si es necesario. El valor por defecto es 1 (puede encogerse).
+La propiedad flex-grow define la capacidad de un ítem flexible para crecer en proporción a los demás ítems flexibles dentro del mismo contenedor. El valor por defecto es 0 (no crece).
+    
+
+flex-grow nos permite cambiar el ancho de las cajas de manera flexible
+    display flex: activa flexbox
+    justify-content trabaja horizontal mientras que align-items funciona vertical
+    flex-direction 
+
+
+Estilos para dispositivos móviles 
+body {
+    font-size: 16px;
+    padding: 10px;
+}
+Media query para tabletas 
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
+Media query para computadoras de escritorio 
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        padding: 30px;
+    }
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_circle');
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+   background-color: rgb(255, 231, 253);
+   display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%; 
+    margin: 0px; 
+    padding: 0px;
+    box-sizing: border-box; 
+    border-style: solid;
+    border-color: rgb(255, 174, 87);
+}
+
+nav .izquierda, nav .derecha {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 50px;
+    font-size: 30px;
+    font-family:"Bebas Neue", serif ;
+    
+}
+
+/*ID*/
+#logo {
+    height: 200px;
+    width: auto;
+    clip-path: circle(40%);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.1); 
+
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+p{
+    text-align: center;
+    font-size: 25px;
+}
+
+/*CLASE*/
+.segundo-p
+{
+    color: rgb(14, 0, 11);
+    font-size: 25px;
+    font-family: serif;
+}
+
+h1{
+    font-family: "Bebas Neue", serif;
+    color: rgb(255, 177, 235);
+    text-align:  center;
+    font-size: 35px;
+}
+body h2 {
+    font-family: "Bebas Neue", serif;
+    color: blueviolet;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+body h3 {
+    font-family: "Bebas Neue", serif;
+    color: rgb(34, 152, 57);
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+/* Listas */
+
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+ul li {
+    font-size: 1em;
+    margin-bottom: 8px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 25px;
+}
+
+section ul li::before {
+    font-family: 'Material Symbols Outlined';
+    content: 'check_circle';
+    color: rgb(255, 148, 25);
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+footer {
+    background-color: rgb(255, 231, 253);
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box; 
+    padding: 5px;
+    margin: 0px; 
+    width: 100%; 
+    align-items: center;
+    justify-content:center;
+    border-style: solid;
+    border-color: rgb(255, 174, 87);
+
+
+}
+
+footer p {
+    
+    text-align: center;
+    font-size: 15px;
+    
+}
+
+section{
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(255, 231, 253);
+    background-color: rgb(239, 255, 255);
+}
+
+#presentacion {
+margin-top: 10px;
+}
+
+.columnas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+.columnas div p {
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.columnas div {
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border-style:double;
+    border-color: rgb(19, 109, 37);
+
+}
+
+.destacadas {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.funcionalidades-destacadas {
+    padding: 20px;
+    border-style:double;
+    border-color: rgb(19, 109, 37);
+    border-width: 3px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.foto{
+    justify-content: center;
+    height: auto;
+    width: 50vh;
+    border-style: solid;
+    border-color: rgb(19, 109, 37);
+    border-radius: 2px;
+    padding-left: auto;
+}
+
+/*USAR GRIDS PARA TESTIMONIOS*/
+
+.columnas {
+    display: grid;
+    grid-template-areas:
+        "centralizacion automatizacion"
+        "counicacicon geolocalizacion";
+        
+}
