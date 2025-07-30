@@ -9,8 +9,6 @@ el # es para los id unicos
 :: (Pseudo-elementos)
 Se usan para crear o estilizar partes de un elemento que no existen en el HTML.
 
-
-
 Siempre es mejor usar las clases para el estetico y los id para la logica.
 
 Las clases son reutilizables, los ID son unicos
@@ -220,7 +218,6 @@ footer {
     justify-content:center;
     border-style: solid;
     border-color: rgb(255, 174, 87);
-
 
 }
 
