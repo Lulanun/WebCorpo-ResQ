@@ -143,44 +143,89 @@
                 </div>
             </div>
         </section>
-
-        <section id="preguntas">
-            <h2>Preguntas Frecuentes</h2>
-            
-            <div>
-                <h3>¿Cómo solicito una demostración?</h3>
-                <p>Completa el formulario de contacto seleccionando "Solicitar demostración" o escribenos directamente a info@res-q.com.ar. Coordinaremos una reunión virtual para mostrarte todas las funcionalidades.</p>
-            </div>
-            
-            <div>
-                <h3>¿Qué incluye el servicio de implementación?</h3>
-                <p>Nuestro servicio incluye instalación, configuración inicial, migración de datos existentes, capacitación del equipo y soporte técnico durante los primeros meses.</p>
-            </div>
-            
-            <div>
-                <h3>¿Res-Q es compatible con otros sistemas?</h3>
-                <p>Sí, Res-Q puede integrarse con sistemas existentes mediante APIs. Evaluamos cada caso para garantizar la mejor integración posible.</p>
-            </div>
-            
-            <div>
-                <h3>¿Qué medidas de seguridad tiene la plataforma?</h3>
-                <p>Res-Q cuenta con autenticación de doble factor, encriptación de datos, backups automáticos y cumple con todas las normas de protección de datos personales.</p>
-            </div>
-            
-            <div>
-                <h3>¿Ofrecen capacitación para el equipo?</h3>
-                <p>Sí, incluimos capacitación completa para administradores y operadores, además de material de apoyo y sesiones de seguimiento.</p>
-            </div>
-        </section>
+<div class="preguntas-frecuentes"> 
+  <h2>Funcionalidades destacadas</h2>
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        ¿Cómo solicito una demostración?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+       Completa el formulario de contacto seleccionando "Solicitar demostración" o escribenos directamente a info@res-q.com.ar. Coordinaremos una reunión virtual para mostrarte todas las funcionalidades.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        ¿Qué incluye el servicio de implementación?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+      Nuestro servicio incluye instalación, configuración inicial, migración de datos existentes, capacitación del equipo y soporte técnico durante los primeros meses.
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        ¿Res-Q es compatible con otros sistemas?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+       Sí, Res-Q puede integrarse con sistemas existentes mediante APIs. Evaluamos cada caso para garantizar la mejor integración posible.
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        ¿Qué medidas de seguridad tiene la plataforma?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+      <div class="accordion-body">
+       Res-Q cuenta con autenticación de doble factor, encriptación de datos, backups automáticos y cumple con todas las normas de protección de datos personales.
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        ¿Ofrecen capacitación para el equipo?
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+      <div class="accordion-body">
+       Sí, incluimos capacitación completa para administradores y operadores, además de material de apoyo y sesiones de seguimiento.
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+</div>
 
         <section id="newsletter">
             <h2>Suscríbete a nuestro Newsletter</h2>
             <p>Mantente informado sobre las últimas novedades, actualizaciones y casos de éxito de Res-Q.</p>
             <form action="#" method="post">
                 <div>
-                    <label for="email_newsletter">Correo electrónico</label>
-                    <input type="email" id="email_newsletter" name="email_newsletter" required>
-                    <button type="submit">Suscribirse</button>
+                <form class="row g-3">
+                    <div class="col-auto">
+                        <label for="email_newsletter" class="visually-hidden">Correo electrónico</label>
+                    </div>
+                    <div class="col-auto">
+                        <label for="email_newsletter" class="visually-hidden">Correo electrónico</label>
+                        <input type="email" class="form-control" id="inputPassword2" placeholder="email@example.com">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-secondary mb-3">Suscribirse</button>
+                    </div>
+                    </form>
                 </div>
             </form>
         </section>
@@ -191,6 +236,7 @@
             Email: <a href="mailto:resq.sanmiguel@gmail.com">resq.sanmiguel@gmail.com</a><br>
             Teléfono: 555-4321<br>
             Proyecto de Seminario Final - Transformación Social a través de la Tecnología
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         </address>
     </footer>
 </body>
