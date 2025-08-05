@@ -10,17 +10,19 @@
 <body>
 <header>
     <nav>
+      <div class="nav-container"> 
         <ul class="izquierda">
             <li><a href="./servicios.html">Servicios</a></li>
             <li><a href="./testimonios.html">Testimonios</a></li>
         </ul>
          <a href="../../index.html" id="logo-link">
             <img src="../img/icono2.png"  alt="Imagen principal del sitio web" id="logo">
-        </a>
+         </a>
         <ul class="derecha">
             <li><a href="./nosotros.html">Nosotros</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
         </ul>
+        </div>
     </nav>
 </header>
 
@@ -32,67 +34,73 @@
 
         <section id="formulario">
             <h2>Solicitar Información</h2>
-            <form action="#" method="post">
-                <div>
-                    <label for="nombre">Nombre completo *</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
+          <div class ="formulario-container">
+            <form action="" method="get">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nombre completo *</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>       
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Correo electrónico *</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>    
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Telefono</span>
+                <input type="tel" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>   
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Institucion/Organizacion *</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>  
+                  <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Cargo</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>  
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Provincia/Ciudad *</span>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+              </div>  
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Tipo de consulta *</label>
+                <select class="form-select" id="inputGroupSelect01">
+                  <option selected>Seleccionar...</option>
+                  <option value="1">Solicitar demostración</option>
+                  <option value="2">Información general</option>
+                  <option value="3">Solicitar presupuesto</option>
+                  <option value="4">Soporte técnico</option>
+                  <option value="5">Alianzas estratégicas</option>
+                  <option value="5">Otro</option>
+                </select>
+              </div>  
+            <div class="input-group">
+              <span class="input-group-text">Mensaje</span>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Cargar Archivo</label>
+              </div>
                 
-                <div>
-                    <label for="email">Correo electrónico *</label>
-                    <input type="email" id="email" name="email" required>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2">
+                  <label class="form-check-label" for="invalidCheck2">
+                    Deseo recibir información sobre actualizaciones y novedades de Res-Q
+                  </label>
                 </div>
-                
-                <div>
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono">
+              </div>
+
+              <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                  <label class="form-check-label" for="validationFormCheck1">Acepto el tratamiento de mis datos personales según la Política de Privacidad *</label>
+                  <div class="invalid-feedback">Es necesario que marque la opcion para avanzar.</div>
                 </div>
-                
-                <div>
-                    <label for="institucion">Institución/Organización *</label>
-                    <input type="text" id="institucion" name="institucion" required>
-                </div>
-                
-                <div>
-                    <label for="cargo">Cargo</label>
-                    <input type="text" id="cargo" name="cargo">
-                </div>
-                
-                <div>
-                    <label for="ubicacion">Ciudad/Provincia *</label>
-                    <input type="text" id="ubicacion" name="ubicacion" required>
-                </div>
-                
-                <div>
-                    <label for="tipo_consulta">Tipo de consulta *</label>
-                    <select id="tipo_consulta" name="tipo_consulta" required>
-                        <option value="">Seleccionar...</option>
-                        <option value="demo">Solicitar demostración</option>
-                        <option value="informacion">Información general</option>
-                        <option value="presupuesto">Solicitar presupuesto</option>
-                        <option value="soporte">Soporte técnico</option>
-                        <option value="partnership">Alianzas estratégicas</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                
-                <div>
-                    <label for="mensaje">Mensaje *</label>
-                    <textarea id="mensaje" name="mensaje" required placeholder="Contanos sobre tu institución, cantidad de usuarios, necesidades específicas, etc."></textarea>
-                </div>
-                
-                <div>
-                    <input type="checkbox" id="privacidad" name="privacidad" required>
-                    <label for="privacidad">Acepto el tratamiento de mis datos personales según la Política de Privacidad *</label>
-                </div>
-                
-                <div>
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">Deseo recibir información sobre actualizaciones y novedades de Res-Q</label>
-                </div>
-                
-                <button type="submit">Enviar consulta</button>
+
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit" >Enviar consulta</button>
+              </div>
             </form>
+          </div>
         </section>
 
         <section id="informacion">
@@ -208,27 +216,6 @@
   </div>
 </div>
 </div>
-
-        <section id="newsletter">
-            <h2>Suscríbete a nuestro Newsletter</h2>
-            <p>Mantente informado sobre las últimas novedades, actualizaciones y casos de éxito de Res-Q.</p>
-            <form action="#" method="post">
-                <div>
-                <form class="row g-3">
-                    <div class="col-auto">
-                        <label for="email_newsletter" class="visually-hidden">Correo electrónico</label>
-                    </div>
-                    <div class="col-auto">
-                        <label for="email_newsletter" class="visually-hidden">Correo electrónico</label>
-                        <input type="email" class="form-control" id="inputPassword2" placeholder="email@example.com">
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-secondary mb-3">Suscribirse</button>
-                    </div>
-                    </form>
-                </div>
-            </form>
-        </section>
 </main>
   <footer class="footer">
         <p>&copy; 2025 Res-Q. Desarrollado por Lourdes Nunes y Agustín Bruno. Todos los derechos reservados.</p>
