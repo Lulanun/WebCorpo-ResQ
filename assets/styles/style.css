@@ -149,91 +149,99 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+
+/*NAV Movil */
+.nav-mobile {
+    display: none;
+    position: relative;
+}
+
+.nav-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-mobile .mobile-logo {
+    height: 60px;
+    width: auto;
+    clip-path: circle(40%);
     border-radius: 5px;
 }
-.mobile-menu {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background-color: rgb(255, 231, 253);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            font-family: "Bebas Neue", serif;
-            font-size: 28px;
-            z-index: 1000;
-            transition: left 0.3s ease;
-            border-right: solid rgb(255, 174, 87);
-        }
 
-        .mobile-menu.active {
-            left: 0;
-        }
+.nav-mobile input {
+    display: none;
+}
 
-        .mobile-menu a {
-            text-decoration: none;
-            color: inherit;
-            padding: 15px 30px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            text-align: center;
-            width: 80%;
-            max-width: 300px;
-        }
+.nav-mobile label {
+    cursor: pointer;
+    padding: 5px;
+}
 
-        .mobile-menu a:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
-        }
+#menu-icon {
+    height: 40px;
+    width: 40px;
+    clip-path: circle(40%);
+    border-radius: 5px;
+}
 
-@media (max-width: 480px) {
-     .hamburger {
-                display: block;
-            }
-            .nav-container {
-                padding: 10px 15px;
-            }
+.nav-mobile ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 231, 253);
+    border: 2px solid rgb(255, 174, 87);
+    border-top: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
-            #logo {
-                height: 70px;
-            }
+.nav-mobile input:checked ~ ul {
+    display: block;
+}
 
-            .mobile-menu {
-                font-size: 24px;
-                gap: 25px;
-            }
+.nav-mobile li {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid rgb(255, 201, 51);
+    font-family: "Bebas Neue", serif;
+}
 
-            .main-content h1 {
-                font-size: 28px;
-            }
+.nav-mobile li:last-child {
+    border-bottom: none;
+}
 
-            .main-content h2 {
-                font-size: 22px;
-            }
+.nav-mobile li a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+}
 
-            .main-content p {
-                font-size: 16px;
-            }
+.nav-mobile li:hover {
+    filter: brightness(110%);
+}
 
-            .footer {
-                padding: 30px 15px 15px;
-            }
+.nav-desktop {
+    display: block;
+}
 
-            .footer-section h3 {
-                font-size: 20px;
-            }
+@media screen and (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    .nav-mobile {
+        display: block;
+    }
+}
 
-            .social-links a {
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-        }
 
 p{
     text-align: center;
