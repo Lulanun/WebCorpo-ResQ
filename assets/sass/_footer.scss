@@ -1,0 +1,36 @@
+@use "variables" as v;
+
+.footer {
+    background-color: v.$colorNav;
+    text-align: center;
+    font-size: 15px;
+    box-sizing: border-box; 
+    padding: 5px;
+    margin: 0px; 
+    width: 100%; 
+    align-items: center;
+    border-style: solid;
+    border-color: v.$colorBorder;
+
+    p {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    @include v.navbar-responsive {
+        padding: 8px;
+        
+        p {
+            font-size: 14px;
+        }
+    }
+
+    @include v.mobile {
+        padding: 6px 10px;
+        
+        p {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+    }
+}

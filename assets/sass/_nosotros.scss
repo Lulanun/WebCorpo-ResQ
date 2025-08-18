@@ -1,0 +1,106 @@
+@use "variables" as v;
+
+#historia,
+#mision,
+#vision,
+#valores,
+#principios,
+#compromiso {
+  margin: 40px auto;
+  padding: v.$paddingDefault;
+  background-color: v.$colorBackground;
+  border-radius: v.$radius;
+
+  h2 {
+    color: v.$colorTitle;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: v.$fontPrimary;
+  }
+
+  p, ul li {
+    font-size: 18px;
+    color: v.$colorText;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li::before {
+      content: "✔ ";
+      color: v.$colorAccent;
+      font-weight: bold;
+    }
+  }
+}
+
+// Equipo
+.equipo-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+.equipo {
+  width: 300px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  h3 {
+    font-family: v.$fontPrimary;
+    color: v.$colorPrimary;
+    margin-bottom: 10px;
+  }
+}
+
+.foto-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: v.$radius;
+  overflow: hidden;
+
+  .foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid v.$colorPrimary;
+    border-radius: v.$radius;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 3px;
+    background-color: rgba(19, 109, 37, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: v.$radius;
+    padding: v.$paddingDefault;
+
+    .text {
+      color: white;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}
+
+@include v.tablet {
+  .equipo-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

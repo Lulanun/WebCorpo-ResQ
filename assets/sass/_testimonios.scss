@@ -1,0 +1,147 @@
+@use "variables" as v;
+
+.testimonios-grid {
+  display: grid;
+  gap: 20px;
+
+  &-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: auto;
+    gap: 20px;
+  }
+}
+
+.testimonio {
+  padding: v.$paddingDefault;
+  border-style: double;
+  border-color: v.$colorPrimary;
+  border-width: 3px;
+  background-color: v.$colorBackground;
+  border-radius: v.$radius;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  animation: zoomInCustom 0.8s ease-out forwards;
+
+  blockquote {
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+  }
+
+  cite {
+    display: block;
+    font-family: v.$fontPrimary;
+    color: v.$colorSecondary;
+    font-size: 18px;
+    font-style: normal;
+    text-align: right;
+    border-top: 2px solid v.$colorBorder;
+    padding-top: 10px;
+    margin-top: 15px;
+  }
+}
+
+.testimonios-carousel {
+  display: none;
+
+  .carousel-item {
+    padding: 10px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: v.$colorAccent;
+    border-radius: 50%;
+    padding: 15px;
+  }
+
+  .carousel-indicators {
+    button {
+      background-color: v.$colorTitle;
+
+      &.active {
+        background-color: v.$colorAccent;
+      }
+    }
+  }
+}
+
+#contactanos {
+  border-width: 3px;
+  padding: v.$paddingLarge;
+  text-align: center;
+
+  h2 {
+    color: v.$colorTitle;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: v.$colorText;
+  }
+
+  a {
+    background-color: v.$colorSecondary;
+    color: white;
+    padding: 15px 30px;
+    border-radius: v.$radius;
+    text-decoration: none;
+    font-family: v.$fontPrimary;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 10px;
+    display: inline-block;
+    border: 2px solid v.$colorPrimary;
+    transition: v.$transition;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: v.$shadowLight;
+      background-color: v.$colorPrimary;
+    }
+  }
+}
+
+@include v.tablet {
+  .testimonios-grid {
+    display: none;
+  }
+
+  .testimonios-carousel {
+    display: block;
+  }
+
+  .testimonios-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin: 30px auto;
+  }
+}
+
+@include v.mobile {
+  .testimonios-grid {
+    display: none;
+  }
+
+  .testimonios-carousel {
+    display: block;
+  }
+
+  .testimonio cite {
+    font-size: 14px;
+  }
+
+  #contactanos a {
+    display: block;
+    margin: 10px 0;
+  }
+}

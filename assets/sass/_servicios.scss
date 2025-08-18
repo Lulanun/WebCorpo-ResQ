@@ -1,0 +1,217 @@
+@use "variables" as v;
+
+#introduccion {
+  text-align: center;
+  margin: 40px auto;
+
+  p {
+    font-size: 22px;
+    color: v.$colorText;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.columnas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+
+  div {
+    padding: v.$paddingDefault;
+    border: 3px double v.$colorPrimary;
+    border-radius: v.$radius;
+    text-align: center;
+
+    h3 {
+      font-family: v.$fontPrimary;
+      color: v.$colorPrimary;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .roles-png {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid v.$colorPrimary;
+    border-radius: v.$radius;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+.funcionalidades-destacadas {
+  padding: v.$paddingDefault;
+  border: 3px double v.$colorPrimary;
+  border-radius: v.$radius;
+  background-color: v.$colorNav;
+  margin-bottom: 20px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: v.$colorTitle;
+  }
+
+  .accordion-item {
+    background-color: v.$colorNav;
+    border-bottom: 1px solid v.$colorBorder;
+  }
+
+  .accordion-button {
+    font-family: v.$fontPrimary;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    transition: v.$transition;
+
+    &:hover {
+      background-color: v.$colorBackground;
+      color: v.$colorPrimary;
+    }
+  }
+}
+
+.main-sections-container {
+  display: grid;
+  grid-template-areas:
+    "tecnologias dirigido"
+    "objetivos objetivos";
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 40px auto;
+}
+
+
+.versiones-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px auto;
+    padding: v.$paddingDefault;
+
+    .card {
+        width: 300px;
+        border: 3px solid v.$colorPrimary;
+        border-radius: v.$radius;
+        padding: v.$paddingDefault;
+        background-color: white;
+        box-shadow: v.$shadowMedium;
+        text-align: center;
+        transition: v.$transition;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: v.$shadowLight;
+        border-color: v.$colorAccent;
+    }
+
+    h3 {
+        color: v.$colorPrimary;
+        font-family: v.$fontPrimary;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: v.$colorText;
+    }
+    }
+}
+
+#contacta {
+    text-align: center;
+    padding: v.$paddingLarge;
+
+    h2 {
+    color: v.$colorTitle;
+    margin-bottom: 20px;
+    }
+
+    p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: v.$colorText;
+  }
+
+    a {
+    background-color: v.$colorSecondary;
+    color: white;
+    padding: 15px 30px;
+    border-radius: v.$radius;
+    text-decoration: none;
+    font-family: v.$fontPrimary;
+    font-size: 20px;
+    border: 2px solid v.$colorPrimary;
+    transition: v.$transition;
+
+    &:hover {
+        background-color: v.$colorPrimary;
+        transform: translateY(-2px);
+        box-shadow: v.$shadowLight;
+    }
+    }
+}
+
+
+@include v.tablet {
+    .main-sections-container {
+    grid-template-areas:
+        "tecnologias"
+        "dirigido"
+        "objetivos";
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    }
+
+    .columnas {
+    flex-direction: column;
+    align-items: center;
+
+    .roles-png {
+        width: 200px;
+        height: 200px;
+    }
+    }
+
+    .versiones-container .card {
+    width: 100%;
+    max-width: 400px;
+    padding: v.$paddingLarge;
+    }
+}
+
+@include v.mobile { 
+    .main-sections-container {
+        grid-template-areas:
+        "tecnologias"
+        "dirigido"
+        "objetivos";
+    grid-template-columns: 1fr; // 1 columna
+    gap: 15px;
+    }
+
+    .roles-png {
+    width: 180px;
+    height: 180px;
+    }
+
+    .versiones-container .card {
+    width: 100%;
+    max-width: 350px;
+    padding: v.$paddingDefault;
+    }
+}

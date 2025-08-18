@@ -1,0 +1,187 @@
+@use "variables" as v;
+
+
+#introduccion {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 100%;
+
+  p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: v.$colorText;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: v.$fontSecondary;
+  }
+}
+
+#formulario {
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: v.$colorTitle;
+    font-family: v.$fontPrimary;
+  }
+
+  .formulario-container {
+    border: 2px solid v.$colorPrimary;
+    padding: v.$paddingDefault;
+    border-radius: v.$radius;
+    background-color: v.$colorBackground;
+  }
+
+  .btn-primary {
+    background-color: v.$colorSecondary;
+    border: 2px solid v.$colorPrimary;
+    font-family: v.$fontPrimary;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: v.$radius;
+    padding: 10px 25px;
+    transition: v.$transition;
+
+    &:hover {
+      background-color: v.$colorPrimary;
+      transform: translateY(-2px);
+      box-shadow: v.$shadowLight;
+    }
+  }
+}
+
+#informacion {
+  width: 100%;
+  margin: 40px auto;
+  padding: v.$paddingLarge;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+
+  h2 {
+    width: 100%;
+    margin-bottom: 20px;
+    color: v.$colorTitle;
+    font-family: v.$fontPrimary;
+  }
+
+  h3 {
+    margin-bottom: 15px;
+    color: v.$colorSecondary;
+    font-family: v.$fontPrimary;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: v.$colorText;
+  }
+
+  a {
+    color: v.$colorPrimary;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: v.$colorSecondary;
+    }
+  }
+}
+
+
+#redes {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: v.$paddingLarge;
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    display: inline-block;
+    background-color: v.$colorAccent;
+    color: v.$colorText;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: v.$fontPrimary;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border: 2px solid v.$colorBorder;
+    transition: v.$transition;
+
+    &:hover {
+      background-color: v.$colorPrimary;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: v.$shadowLight;
+    }
+  }
+}
+#mapa {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: v.$paddingLarge;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+    color: v.$colorTitle;
+    font-family: v.$fontPrimary;
+  }
+
+
+  .mapa-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 40%; 
+    margin: 0 auto;
+    max-width: 600px; 
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: v.$radius;
+    border: 2px solid v.$colorBorder;
+    box-shadow: v.$shadowMedium;
+  }
+
+  @media (max-width: 768px) {
+    padding: v.$paddingDefault;
+    
+    .mapa-container {
+      max-width: 100%;
+      padding-bottom: 60%; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 20px auto;
+    padding: 15px;
+    
+    .mapa-container {
+      padding-bottom: 75%; 
+    }
+
+    iframe {
+      border-radius: 8px; 
+    }
+  }
+}
