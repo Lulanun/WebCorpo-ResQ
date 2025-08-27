@@ -353,7 +353,7 @@ section {
 #valores,
 #principios,
 #compromiso {
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 20px;
   background-color: rgb(239, 255, 255);
   border-radius: 10px;
@@ -468,7 +468,7 @@ section {
 }
 .testimonios-grid {
   display: grid;
-  gap: 20px;
+  gap: 30px;
 }
 .testimonios-grid-3 {
   grid-template-columns: repeat(3, 1fr);
@@ -591,7 +591,7 @@ section {
 }
 #introduccion {
   text-align: center;
-  margin: 40px auto;
+  margin: 10px auto;
 }
 #introduccion p {
   font-size: 22px;
